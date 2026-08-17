@@ -1,0 +1,26 @@
+# Secrets and Python environments
+.env
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Build and editor artifacts
+build/
+dist/
+*.egg-info/
+.vscode/
+
+# Generated local datasets, databases, logs, and reports
+data/raw/**
+data/curated/**
+data/snapshots/**
+data/metadata/**
+!data/**/.gitkeep
+*.duckdb
+*.log
+research/reports/**
+!research/reports/.gitkeep

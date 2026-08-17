@@ -1,0 +1,10 @@
+local:
+  timezone: UTC
+  paper_trading_only: true
+  allow_order_execution: false
+  storage:
+    parquet_root: data
+    duckdb_path: data/metadata/xau_quant.duckdb
+  delta:
+    rest_base_url: https://api.india.delta.exchange
+    public_websocket_url: wss://public-socket.india.delta.exchange

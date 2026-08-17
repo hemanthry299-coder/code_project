@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xau-quant-platform"
+version = "0.1.0"
+description = "Local XAUTUSD quantitative research and paper-market-analysis platform."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "duckdb>=1.1",
+    "httpx>=0.27",
+    "numpy>=2.0",
+    "pandas>=2.2",
+    "polars>=1.0",
+    "pyarrow>=17.0",
+    "python-dotenv>=1.0",
+    "PyYAML>=6.0",
+    "websockets>=13.0",
+]
+
+[project.optional-dependencies]
+research = ["optuna>=4.0", "vectorbt>=0.26"]
+dashboard = ["plotly>=5.24", "streamlit>=1.38"]
+ai = ["openai>=1.0"]
+alerts = ["httpx>=0.27"]
+dev = ["pytest>=8.3", "ruff>=0.6"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100

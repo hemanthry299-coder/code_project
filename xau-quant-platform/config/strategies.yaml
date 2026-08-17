@@ -1,0 +1,13 @@
+registry:
+  allowed_statuses: [RESEARCH, VALIDATED, APPROVED, PAPER, RETIRED]
+  approval_requires:
+    - realistic_backtest
+    - chronological_validation
+    - out_of_sample_validation
+    - walk_forward
+    - robustness_analysis
+    - minimum_trade_count
+    - drawdown_limit
+    - parameter_stability
+    - paper_trading
+strategies: []

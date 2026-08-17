@@ -1,0 +1,15 @@
+instruments:
+  XAUTUSD:
+    display_name: Tether Gold Token perpetual
+    product_id: 131253
+    venue: delta_exchange_india
+    contract_type: perpetual_futures
+    price_currency: USD
+    tick_size: 0.01
+    canonical_timeframe: 1m
+    derived_timeframes: [5m, 15m, 30m, 1h, 4h, 1d]
+    rest_base_url: https://api.india.delta.exchange
+    public_websocket_url: wss://public-socket.india.delta.exchange
+    notes: >-
+      Verified from Delta's public product catalogue on 2026-08-18. This is tokenized
+      gold (XAUT), not a conventional spot XAUUSD price feed.
